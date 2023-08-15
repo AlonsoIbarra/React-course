@@ -1,0 +1,10 @@
+version: '3.8'  # Use the desired version of Docker Compose
+
+services:
+  # Service for your React application
+  react-app:
+    build: .  # Use the current directory as the build context
+    ports:
+      - "3000:3000"  # Map port 3000 on the host to port 3000 on the container
+    volumes:
+      - .:/app  # Mount the current directory to the /app directory in the container
