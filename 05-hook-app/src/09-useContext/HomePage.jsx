@@ -7,7 +7,11 @@ export const HomePage = ()=>{
     return (
         <>
             <h2>Home page</h2>
-            <h5>{ user.name ?? '' }</h5>
+            <h5>
+                <pre aria-label="username">
+                    { user.name ?? '' }
+                </pre>
+            </h5>
             <hr />
 
 

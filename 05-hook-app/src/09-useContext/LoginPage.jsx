@@ -7,7 +7,11 @@ export const LoginPage = ()=>{
     return (
         <>
             <h2>Login page</h2>
-            <h5>{ user.name ?? '' }</h5>
+            <h5>
+                <pre aria-label="username">
+                    { user.name ?? '' }
+                </pre>
+            </h5>
             <hr />
             <button className="btn btn-primary" onClick={()=>setUser({...user,name:'alonso'})}>
                 logIn
