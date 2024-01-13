@@ -1,10 +1,11 @@
-import { Navbar } from "./../../UI/components";
+import { HeroList } from "../components";
 
 export const MarvelPage = () =>{
     return (
         <>
-            <Navbar/>
-            <h2>Marvel Page</h2>
+            <h2>DC Page</h2>
+            <hr />
+            <HeroList publisher={'Marvel Comics'}/>
         </>
     )
 }

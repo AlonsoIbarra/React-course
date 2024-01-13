@@ -1,30 +1,17 @@
 
-import { Navigate, Route, Routes, createBrowserRouter } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
+
+import { HeroesRoutes } from "./../heroes";
 import { AboutPage, LoginPage } from "../auth/pages";
-import { DCPage, MarvelPage } from "../heroes/pages";
 
-export const AppRouter = createBrowserRouter(
-  [
-    {
-      path: "/login",
-      element: <LoginPage/>,
-    },
-    {
-      path: "/about",
-      element: <AboutPage/>,
-    },
-    {
-      path: "/dc",
-      element: <DCPage/>,
-    },
-
-    {
-      path: "/marvel",
-      element: <MarvelPage/>,
-    },
-    {
-      path: "/",
-      element: <Navigate to="/login"/>,
-    },
-  ]
-);
+export const AppRouter = ()=>{
+  return(
+    <>
+      <Routes>
+        <Route path="login" element={<LoginPage/>} />
+        <Route path="about" element={<AboutPage/>} />
+        <Route path="/*" element={<HeroesRoutes/>} />
+      </Routes>
+    </>
+  )
+}
