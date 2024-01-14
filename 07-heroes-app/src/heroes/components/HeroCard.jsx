@@ -6,7 +6,7 @@ export const HeroCard = ({
     first_appearance,
     characters
 })=>{
-    const heroImgPath = `/assets/heroes/${id}.jpg`;
+    const heroImgPath = `/heroes/${ id }.jpg`;
 
     return (
         <>
